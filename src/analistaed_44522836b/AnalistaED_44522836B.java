@@ -1,6 +1,11 @@
 
 package analistaed_44522836b;
 import java.util.*;
+/**Ejercicio práctico examen EVAL 1 ED
+ * 
+ * @author Africa Pont DNI 44522836B
+ * @version 1.0
+ */
 
 public class AnalistaED_44522836B {
 
@@ -8,12 +13,28 @@ public class AnalistaED_44522836B {
   static final double FACTOR_HORA_EXTRA = 1.2;
     private String nombreCompleto, dni;
     private double salarioBasePorHora = 10.56;
+    
+    /**
+     * Constructor con cuatro parámetros
+     * 
+     * @param nombreCompleto nombre completo en matúsculas
+     * @param dni documento nacional de identidad con letra y sin espacios
+     */
 
     public AnalistaED_44522836B(String nombreCompleto, String dni) {
         this.nombreCompleto = nombreCompleto;
         this.dni = dni;
     }
-
+    
+    /**Calcula el salario bruto mensual en funicón del salario base por hora y
+     * las horas extras El precio por hora de la hora extra se determina con la 
+     * constante FACTOR_HORA_EXTRA
+     * 
+     * @param horasExtra número de horas extra dedicadas redondeando a la baja
+     * (entero)
+     * 
+     * @return devuelve el salario bruto mensual en euros con dos decimales
+     */
     public double getSalarioEsteMes(int horasExtra) {
         double cantidadExtra, salarioFinal;
         cantidadExtra = horasExtra * this.salarioBasePorHora * FACTOR_HORA_EXTRA;
